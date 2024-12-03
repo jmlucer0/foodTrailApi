@@ -26,7 +26,7 @@ public class Cliente {
     @Pattern(regexp = "\\d{6,10}")
     private String telefono;
     private String direccion;
-    private boolean activo = true;
+    private Boolean activo = true;
 
     public void eliminarCliente(Cliente cliente) {
         this.activo = false;
