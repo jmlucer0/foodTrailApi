@@ -169,8 +169,8 @@ public class ProductoController {
     })
     @DeleteMapping("/{id}")
     public ResponseEntity eliminarProducto(@PathVariable Long id){
-        boolean borrado = productoService.borrarProducto(id);
-        if (borrado){
+        boolean eliminado = productoService.borrarProducto(id);
+        if (eliminado){
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
