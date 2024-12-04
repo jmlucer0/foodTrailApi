@@ -1,4 +1,4 @@
-package com.foodtrail.foodtrail_api.dtos;
+package com.foodtrail.foodtrail_api.dtos.producto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

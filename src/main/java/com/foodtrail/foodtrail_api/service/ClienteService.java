@@ -1,7 +1,7 @@
 package com.foodtrail.foodtrail_api.service;
 
 
-import com.foodtrail.foodtrail_api.dtos.ClienteDto;
+import com.foodtrail.foodtrail_api.dtos.cliente.ClienteDto;
 import com.foodtrail.foodtrail_api.exception.ClienteException;
 import com.foodtrail.foodtrail_api.mapper.ClienteMapper;
 import com.foodtrail.foodtrail_api.model.Cliente;

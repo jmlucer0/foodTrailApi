@@ -1,6 +1,6 @@
 package com.foodtrail.foodtrail_api.mapper;
 
-import com.foodtrail.foodtrail_api.dtos.ClienteDto;
+import com.foodtrail.foodtrail_api.dtos.cliente.ClienteDto;
 import com.foodtrail.foodtrail_api.model.Cliente;
 import org.springframework.stereotype.Component;
 

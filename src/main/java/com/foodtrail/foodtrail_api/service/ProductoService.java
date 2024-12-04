@@ -1,6 +1,6 @@
 package com.foodtrail.foodtrail_api.service;
 
-import com.foodtrail.foodtrail_api.dtos.ProductoDto;
+import com.foodtrail.foodtrail_api.dtos.producto.ProductoDto;
 import com.foodtrail.foodtrail_api.mapper.ProductoMapper;
 import com.foodtrail.foodtrail_api.model.Producto;
 import com.foodtrail.foodtrail_api.repository.ProductoRepository;
