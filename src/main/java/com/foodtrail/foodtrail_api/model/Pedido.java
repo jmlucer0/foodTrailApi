@@ -21,7 +21,7 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate fechaDePedido = LocalDate.now();
-    private boolean enviado = false;
+    private Boolean enviado = false;
 
     @ManyToOne
     private Cliente cliente;
@@ -31,6 +31,12 @@ public class Pedido {
     @MapKeyJoinColumn(name = "producto_id")
     @Column(name = "cantidad")
     private Map<Producto, Integer> productos = new HashMap<>();
-    private double precioTotal;
+    private Double precioTotal;
     private FormaDePago formaDePago;
+
+    public Double calcularPrecio() {
+        return productos.entrySet().stream()
+                .mapToDouble(entry -> entry.getKey().getPrecio() * entry.getValue())
+                .sum();
+    }
 }

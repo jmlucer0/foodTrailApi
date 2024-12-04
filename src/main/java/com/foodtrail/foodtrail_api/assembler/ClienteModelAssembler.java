@@ -1,7 +1,7 @@
 package com.foodtrail.foodtrail_api.assembler;
 
 import com.foodtrail.foodtrail_api.controller.ClienteController;
-import com.foodtrail.foodtrail_api.dtos.ClienteDto;
+import com.foodtrail.foodtrail_api.dtos.cliente.ClienteDto;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;

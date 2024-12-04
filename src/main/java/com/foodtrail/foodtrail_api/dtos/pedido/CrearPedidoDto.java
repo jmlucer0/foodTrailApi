@@ -1,20 +1,20 @@
-package com.foodtrail.foodtrail_api.dtos;
+package com.foodtrail.foodtrail_api.dtos.pedido;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.foodtrail.foodtrail_api.model.FormaDePago;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Map;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ClienteDto {
+public class CrearPedidoDto {
 
-
-    Long id;
-    String nombre;
-    String telefono;
-    String direccion;
-    Boolean activo = true;
+    Long clienteId;
+    FormaDePago formaDePago;
+    Map<Long, Integer> productos;
 }

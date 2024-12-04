@@ -1,6 +1,6 @@
 package com.foodtrail.foodtrail_api.util.updater;
 
-import com.foodtrail.foodtrail_api.dtos.ProductoDto;
+import com.foodtrail.foodtrail_api.dtos.producto.ProductoDto;
 import com.foodtrail.foodtrail_api.model.Producto;
 import org.springframework.stereotype.Component;
 

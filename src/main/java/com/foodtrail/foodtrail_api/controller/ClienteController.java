@@ -1,7 +1,7 @@
 package com.foodtrail.foodtrail_api.controller;
 
 import com.foodtrail.foodtrail_api.assembler.ClienteModelAssembler;
-import com.foodtrail.foodtrail_api.dtos.ClienteDto;
+import com.foodtrail.foodtrail_api.dtos.cliente.ClienteDto;
 import com.foodtrail.foodtrail_api.mapper.ClienteMapper;
 import com.foodtrail.foodtrail_api.model.Cliente;
 import com.foodtrail.foodtrail_api.service.ClienteService;
