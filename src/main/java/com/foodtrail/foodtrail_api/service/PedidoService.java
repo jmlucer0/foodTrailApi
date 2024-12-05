@@ -11,6 +11,7 @@ import com.foodtrail.foodtrail_api.repository.ClienteRepository;
 import com.foodtrail.foodtrail_api.repository.PedidoRepository;
 import com.foodtrail.foodtrail_api.repository.ProductoRepository;
 import com.foodtrail.foodtrail_api.util.updater.PedidoUpdater;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -47,7 +48,13 @@ public class PedidoService {
 
    @Transactional
    public boolean eliminarPedido(Long id){
-        return true;
+       try {
+           Pedido pedido = pedidoRepository.getReferenceById(id);
+           pedidoRepository.delete(pedido);
+           return true;
+       } catch (EntityNotFoundException e) {
+           return false;
+       }
    }
 
     @Transactional
@@ -76,7 +83,7 @@ public class PedidoService {
         return pedidos;
     }
 
-    public Page<Pedido> buscarPedidosPorFormaDePago(String tipoDePago){
-        return null;
+    public Page<Pedido> buscarPedidosPorFormaDePago(Pageable pageable, String tipoDePago){
+        return pedidoRepository.findByFormaDePago(pageable, tipoDePago);
     }
 }
